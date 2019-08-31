@@ -2,13 +2,14 @@ package com.mycompany.myapp.domain;
 
 import java.util.Date;
 
+
 public class BoardVO {
 	private Long bNo;
 	private String bName;
 	private String bTitle;
 	private String bContent;
-	private Date date;
-	private Date updateDate;
+	private Date bDate;
+	private Date bUpdateDate;
 	private Long bhit;
 	private int bGroup;
 	private int bStep;
@@ -37,17 +38,17 @@ public class BoardVO {
 	public void setbContent(String bContent) {
 		this.bContent = bContent;
 	}
-	public Date getDate() {
-		return date;
+	public Date getbDate() {
+		return bDate;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setbDate(Date bDate) {
+		this.bDate = bDate;
 	}
-	public Date getUpdateDate() {
-		return updateDate;
+	public Date getbUpdateDate() {
+		return bUpdateDate;
 	}
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
+	public void setbUpdateDate(Date bUpdateDate) {
+		this.bUpdateDate = bUpdateDate;
 	}
 	public Long getBhit() {
 		return bhit;
@@ -73,6 +74,9 @@ public class BoardVO {
 	public void setbIndent(int bIndent) {
 		this.bIndent = bIndent;
 	}
+	
+	
+	
 	
 	
 }

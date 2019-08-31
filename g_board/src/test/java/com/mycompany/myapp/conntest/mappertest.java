@@ -26,8 +26,7 @@ public class mappertest {
 	@Test
 	public void get() {
 		BoardVO vo = mapper.get(1);
-		System.out.println(vo.getbNo());
-		System.out.println(vo.getbName());
+		
 	}
 
 }
