@@ -2,6 +2,7 @@ package com.mycompany.myapp.domain;
 
 import java.util.Date;
 
+
 public class BoardVO {
 	private Long bNo;
 	private String bName;

@@ -26,6 +26,7 @@ public class mappertest {
 	@Test
 	public void get() {
 		BoardVO vo = mapper.get(1);
+		
 	}
 
 }

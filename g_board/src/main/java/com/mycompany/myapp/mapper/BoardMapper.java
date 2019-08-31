@@ -6,4 +6,5 @@ public interface BoardMapper {
 	public int count();
 	
 	public BoardVO get(long bNo);
+	
 }
