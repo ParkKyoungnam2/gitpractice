@@ -1,7 +1,5 @@
 package com.mycompany.myapp.conntest;
 
-import static org.junit.Assert.fail;
-
 import javax.inject.Inject;
 
 import org.junit.Test;
@@ -9,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.mycompany.myapp.domain.BoardVO;
 import com.mycompany.myapp.mapper.BoardMapper;
 
 
@@ -22,6 +21,13 @@ public class mappertest {
 	public void test() {
 		int count = mapper.count();
 		System.out.println(count);
+	}
+	
+	@Test
+	public void get() {
+		BoardVO vo = mapper.get(1);
+		System.out.println(vo.getbNo());
+		System.out.println(vo.getbName());
 	}
 
 }
