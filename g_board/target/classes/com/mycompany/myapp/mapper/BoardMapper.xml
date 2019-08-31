@@ -6,4 +6,8 @@
 	<select id="count" resultType="int">
 		select count(*) from g_board
 	</select>
+	
+	<select id="get" resultType="com.mycompany.myapp.domain.BoardVO">
+		select * from g_board where bNo = #{bNo}
+	</select>
 </mapper>
