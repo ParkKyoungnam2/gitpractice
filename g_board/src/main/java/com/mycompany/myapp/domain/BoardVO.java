@@ -3,21 +3,20 @@ package com.mycompany.myapp.domain;
 import java.util.Date;
 
 public class BoardVO {
-	private double bNo;
+	private Long bNo;
 	private String bName;
 	private String bTitle;
 	private String bContent;
 	private Date date;
 	private Date updateDate;
-	private double bhit;
+	private Long bhit;
 	private int bGroup;
 	private int bStep;
 	private int bIndent;
-	
-	public double getbNo() {
+	public Long getbNo() {
 		return bNo;
 	}
-	public void setbNo(double bNo) {
+	public void setbNo(Long bNo) {
 		this.bNo = bNo;
 	}
 	public String getbName() {
@@ -50,10 +49,10 @@ public class BoardVO {
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
-	public double getBhit() {
+	public Long getBhit() {
 		return bhit;
 	}
-	public void setBhit(double bhit) {
+	public void setBhit(Long bhit) {
 		this.bhit = bhit;
 	}
 	public int getbGroup() {
@@ -74,4 +73,6 @@ public class BoardVO {
 	public void setbIndent(int bIndent) {
 		this.bIndent = bIndent;
 	}
+	
+	
 }
