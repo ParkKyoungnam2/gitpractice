@@ -20,3 +20,17 @@ values (g_seq.nextval, 'user', 'title', 'content', g_seq.currval);
 select * from g_board;
 
 commit;
+
+alter table 
+g_board 
+modify 
+(bhit default 0);
+
+commit;
+
+alter table
+g_board
+modify
+(bgroup not null);
+
+commit;
