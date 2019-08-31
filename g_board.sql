@@ -1,3 +1,5 @@
+create SEQUENCE g_seq;
+
 create table g_board(
     bno NUMBER(10,0), -- 글번호
     bname varchar2(50) not null, -- 작성자
@@ -11,3 +13,10 @@ create table g_board(
     bindent number(4,0) default 0);
 
 alter table g_board add constraint pk_g_board primary key (bno);
+
+insert into g_board(bno, bname, btitle, bcontent, bgroup)
+values (g_seq.nextval, 'user', 'title', 'content', g_seq.currval);
+
+select * from g_board;
+
+commit;
