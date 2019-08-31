@@ -8,8 +8,8 @@ public class BoardVO {
 	private String bName;
 	private String bTitle;
 	private String bContent;
-	private Date date;
-	private Date updateDate;
+	private Date bdate;
+	private Date bupdateDate;
 	private Long bhit;
 	private int bGroup;
 	private int bStep;
