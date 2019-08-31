@@ -34,3 +34,7 @@ modify
 (bgroup not null);
 
 commit;
+
+select count(*) from g_board;
+
+update g_board set bhit =0;
