@@ -23,4 +23,13 @@
 	<delete id="delete">
 		delete g_board where bno = #{bno}
 	</delete>
+	
+	<update id="modify">
+		update g_board 
+		set bName = #{bName},
+		bTitle = #{bTitle},
+		bContent = #{bContent},
+		bUpdatedate = sysdate
+		where bno = #{bNo}
+	</update>
 </mapper>
