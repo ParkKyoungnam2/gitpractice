@@ -14,4 +14,9 @@
 	<select id="getList" resultType="com.mycompany.myapp.domain.BoardVO">
 		select * from g_board order by bGroup desc, bStep asc
 	</select>
+	
+	<insert id="insert">
+		insert into g_board(bno, bname, btitle, bcontent, bgroup)
+		values (g_seq.nextval, #{bName}, #{bTitle}, #{bContent}, g_seq.currval)
+	</insert>
 </mapper>
