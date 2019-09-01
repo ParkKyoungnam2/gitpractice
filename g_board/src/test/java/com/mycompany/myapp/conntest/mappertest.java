@@ -50,4 +50,18 @@ public class mappertest {
 		BoardVO vo = new BoardVO();
 		mapper.insert(vo);
 	}
+	
+	@Test
+	public void deleteTest() {
+		mapper.delete(2);
+	}
+	
+	@Test
+	public void modifyTest() {
+		BoardVO vo = mapper.get(2);
+		vo.setbName("수정된 작성자test");
+		vo.setbTitle("수정된 제목test");
+		vo.setbContent("수정된 글 내용test");
+		mapper.modify(vo);
+	}
 }

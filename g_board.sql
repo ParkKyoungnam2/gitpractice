@@ -40,3 +40,7 @@ select count(*) from g_board;
 update g_board set bhit =0;
 
 select * from g_board order by bGroup desc, bStep asc;
+
+select sysdate from dual;
+
+update g_board set bName = '수정된 작성자명' , bTitle = '수정된 글제목' , bContent = '수정된 글 내용' where bno = 1;
