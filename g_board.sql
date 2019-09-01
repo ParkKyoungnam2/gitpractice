@@ -38,3 +38,5 @@ commit;
 select count(*) from g_board;
 
 update g_board set bhit =0;
+
+select * from g_board order by bGroup desc, bStep asc;

@@ -1,5 +1,7 @@
 package com.mycompany.myapp.mapper;
 
+import java.util.List;
+
 import com.mycompany.myapp.domain.BoardVO;
 
 public interface BoardMapper {
@@ -7,4 +9,5 @@ public interface BoardMapper {
 	
 	public BoardVO get(long bNo);
 	
+	public List<BoardVO> getList();
 }

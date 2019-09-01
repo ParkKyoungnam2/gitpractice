@@ -26,7 +26,10 @@ public class mappertest {
 	@Test
 	public void get() {
 		BoardVO vo = mapper.get(1);
-		
 	}
 
+	@Test
+	public void getList() {
+		mapper.getList();
+	}
 }
