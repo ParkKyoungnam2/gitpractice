@@ -19,4 +19,8 @@
 		insert into g_board(bno, bname, btitle, bcontent, bgroup)
 		values (g_seq.nextval, #{bName}, #{bTitle}, #{bContent}, g_seq.currval)
 	</insert>
+	
+	<delete id="delete">
+		delete g_board where bno = #{bno}
+	</delete>
 </mapper>

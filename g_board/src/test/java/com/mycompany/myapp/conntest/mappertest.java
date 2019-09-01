@@ -50,4 +50,9 @@ public class mappertest {
 		BoardVO vo = new BoardVO();
 		mapper.insert(vo);
 	}
+	
+	@Test
+	public void deleteTest() {
+		mapper.delete(2);
+	}
 }
