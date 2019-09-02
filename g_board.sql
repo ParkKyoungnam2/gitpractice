@@ -1,14 +1,14 @@
 create SEQUENCE g_seq;
 
 create table g_board(
-    bno NUMBER(10,0), -- ±Û¹øÈ£
-    bname varchar2(50) not null, -- ÀÛ¼ºÀÚ
-    btitle varchar2(200) not null, -- ±ÛÁ¦¸ñ 
-    bcontent varchar2(2000) not null, -- ±Û³»¿ë
-    bdate date default sysdate, -- ÀÛ¼ºÀÏ
-    bupdatedate date default sysdate, -- ¼öÁ¤ÀÏ
-    bhit number(10,0), -- Á¶È¸¼ö
-    bgroup number(10,0), -- °èÃşÇü °Ô½ÃÆÇ ±¸Çö¿¡ ÇÊ¿äÇÑ ¿ä¼Ò
+    bno NUMBER(10,0), -- ê¸€ë²ˆí˜¸
+    bname varchar2(50) not null, -- ì‘ì„±ì
+    btitle varchar2(200) not null, -- ê¸€ì œëª© 
+    bcontent varchar2(2000) not null, -- ê¸€ë‚´ìš©
+    bdate date default sysdate, -- ì‘ì„±ì¼
+    bupdatedate date default sysdate, -- ìˆ˜ì •ì¼
+    bhit number(10,0), -- ì¡°íšŒìˆ˜
+    bgroup number(10,0), -- ê³„ì¸µí˜• ê²Œì‹œíŒ êµ¬í˜„ì— í•„ìš”í•œ ìš”ì†Œ
     bstep number (4,0) default 0,
     bindent number(4,0) default 0);
 
@@ -43,4 +43,5 @@ select * from g_board order by bGroup desc, bStep asc;
 
 select sysdate from dual;
 
-update g_board set bName = '¼öÁ¤µÈ ÀÛ¼ºÀÚ¸í' , bTitle = '¼öÁ¤µÈ ±ÛÁ¦¸ñ' , bContent = '¼öÁ¤µÈ ±Û ³»¿ë' where bno = 1;
+update g_board set bName = 'ìˆ˜ì •ëœ ì‘ì„±ìëª…' , bTitle = 'ìˆ˜ì •ëœ ê¸€ì œëª©' , bContent = 'ìˆ˜ì •ëœ ê¸€ ë‚´ìš©' where bno = 1;
+--ã…ã…
