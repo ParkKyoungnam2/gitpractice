@@ -39,5 +39,10 @@ public class ServiceTest {
 		
 		boardService.modify(vo);
 	}
+	
+	@Test
+	public void deleteTest() {
+		boardService.delete(21L);
+	}
 
 }

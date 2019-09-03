@@ -46,4 +46,10 @@ public class BoardServiceImpl implements BoardService {
 		boardMapper.bHitUpdate(bNo);
 	}
 
+	@Override
+	public void delete(Long bNo) {
+		// TODO Auto-generated method stub
+		boardMapper.delete(bNo);
+	}
+
 }

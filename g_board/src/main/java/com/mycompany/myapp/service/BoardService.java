@@ -15,4 +15,6 @@ public interface BoardService {
 	public void modify(BoardVO boardVO);
 	
 	public void bHitUpdate(Long bNo);
+	
+	public void delete(Long bNo);
 }
