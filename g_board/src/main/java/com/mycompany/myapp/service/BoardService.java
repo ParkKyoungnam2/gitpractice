@@ -11,4 +11,8 @@ public interface BoardService {
 	public void insert(BoardVO boardVO);
 	
 	public BoardVO read(Long bNo);
+	
+	public void modify(BoardVO boardVO);
+	
+	public void bHitUpdate(Long bNo);
 }

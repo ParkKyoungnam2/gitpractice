@@ -38,7 +38,7 @@ public class BController {
 	
 	@RequestMapping("/read")
 	public String read(@RequestParam("bno")Long bNo, Model model) {
-		
+		boardService.bHitUpdate(bNo);
 		BoardVO vo = boardService.read(bNo);
 		model.addAttribute("read",vo);
 		return "/board/read";

@@ -28,5 +28,16 @@ public class ServiceTest {
 	public void readTest() {
 		BoardVO vo = boardService.read(1L);
 	}
+	
+	@Test
+	public void modifyTest() {
+		BoardVO vo = boardService.read(8L);
+		
+		vo.setbTitle("글 제목 수정 테스트");
+		vo.setbName("글 작성자 수정 테스트");
+		vo.setbContent("글 내용 수정 테스트");
+		
+		boardService.modify(vo);
+	}
 
 }
