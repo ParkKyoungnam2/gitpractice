@@ -5,7 +5,6 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mycompany.myapp.domain.BoardVO;
@@ -25,12 +24,12 @@ public class BController {
 		return "/board/list";
 	}
 	
-	@RequestMapping(value="/write", method = RequestMethod.GET)
+	@RequestMapping("/write")
 	public String write() {
 		return "/board/write";
 	}
 	
-	@RequestMapping(value="/writeform", method = RequestMethod.POST)
+	@RequestMapping("/writeform")
 	public String writeFrom(BoardVO boardVO) {
 		boardService.insert(boardVO);
 		return "redirect:/board/list";
@@ -39,10 +38,24 @@ public class BController {
 	@RequestMapping("/read")
 	public String read(@RequestParam("bno")Long bNo, Model model) {
 		boardService.bHitUpdate(bNo);
-		BoardVO vo = boardService.read(bNo);
-		model.addAttribute("read",vo);
+		model.addAttribute("board",boardService.read(bNo));
+		
 		return "/board/read";
 	}
 	
+	@RequestMapping("/modify")
+	public String modify(@RequestParam("bno")Long bNo, Model model) {
+		//뭔가 마음에 걸리네 .. 이렇게 하면 안될꺼같음 나중에 고치는걸로
+		model.addAttribute("board",boardService.read(bNo));
+		return "/board/modify";
+	}
+	
+	@RequestMapping("/modifyform")
+	public String modifyForm(BoardVO vo) {
+		
+		boardService.modify(vo);
+		
+		return "redirect:/board/list";
+	}
 	
 }
