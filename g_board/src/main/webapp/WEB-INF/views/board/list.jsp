@@ -35,6 +35,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
+		<button class="btn btn-primary" type="button" onclick="location.href='${path}/board/write'"> 글 쓰 기 </button>
 </div>
 
 
