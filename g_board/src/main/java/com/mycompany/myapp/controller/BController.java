@@ -31,8 +31,8 @@ public class BController {
 	
 	@RequestMapping(value="/writeform", method = RequestMethod.POST)
 	public String writeFrom(BoardVO boardVO) {
-		
-		return "/board/write";
+		boardService.insert(boardVO);
+		return "redirect:/board/list";
 	}
 	
 	

@@ -12,7 +12,7 @@
 	<h3 class="m-0 font-weight-bold text-primary">글 쓰 기</h3>
 </div>
 <div class="container">
-	<form action="/board/writeform" method="post">
+	<form action="${path }/board/writeform" method="post">
 		<div class="form-group">
 			글제목<input class="form-control" name="bTitle"></input>
 		</div>
@@ -27,8 +27,6 @@
 		<button class="btn btn-primary" type="button"
 			onclick="location.href='${path}/board/list'">목 록</button>
 	</form>
-
-
 </div>
 
 

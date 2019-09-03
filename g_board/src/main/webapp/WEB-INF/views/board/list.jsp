@@ -27,7 +27,7 @@
 				<c:forEach items="${list}" var="list">
 				<tr>
 					<td>${list.bNo}</td>
-					<td>${list.bTitle}</td>
+					<td><a href="${path }/board/">${list.bTitle}</a></td>
 					<td>${list.bName}</td>
 					<td>${list.bDate}</td>
 					<td>${list.bHit}</td>
