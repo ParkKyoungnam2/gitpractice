@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mycompany.myapp.domain.BoardVO;
 import com.mycompany.myapp.service.BoardService;
@@ -33,6 +34,14 @@ public class BController {
 	public String writeFrom(BoardVO boardVO) {
 		boardService.insert(boardVO);
 		return "redirect:/board/list";
+	}
+	
+	@RequestMapping("/read")
+	public String read(@RequestParam("bno")Long bNo, Model model) {
+		
+		BoardVO vo = boardService.read(bNo);
+		model.addAttribute("read",vo);
+		return "/board/read";
 	}
 	
 	
