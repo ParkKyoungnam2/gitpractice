@@ -26,11 +26,11 @@
 			<tbody>
 				<c:forEach items="${list}" var="list">
 				<tr>
-					<td>${list.bno}</td>
-					<td>${list.btitle}</td>
-					<td>${list.bname}</td>
-					<td>${list.bdate}</td>
-					<td>${list.bhit}</td>
+					<td>${list.bNo}</td>
+					<td>${list.bTitle}</td>
+					<td>${list.bName}</td>
+					<td>${list.bDate}</td>
+					<td>${list.bHit}</td>
 				</tr>
 				</c:forEach>
 			</tbody>

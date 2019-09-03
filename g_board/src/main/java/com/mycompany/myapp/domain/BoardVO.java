@@ -10,7 +10,7 @@ public class BoardVO {
 	private String bContent;
 	private Date bDate;
 	private Date bUpdateDate;
-	private Long bhit;
+	private Long bHit;
 	private int bGroup;
 	private int bStep;
 	private int bIndent;
@@ -50,11 +50,11 @@ public class BoardVO {
 	public void setbUpdateDate(Date bUpdateDate) {
 		this.bUpdateDate = bUpdateDate;
 	}
-	public Long getBhit() {
-		return bhit;
+	public Long getbHit() {
+		return bHit;
 	}
-	public void setBhit(Long bhit) {
-		this.bhit = bhit;
+	public void setbHit(Long bHit) {
+		this.bHit = bHit;
 	}
 	public int getbGroup() {
 		return bGroup;
