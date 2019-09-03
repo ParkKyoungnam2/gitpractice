@@ -27,7 +27,9 @@
 		<button class="btn btn-primary" type="submit">글 수 정</button>
 		<button class="btn btn-primary" type="button"
 			onclick="location.href='${path}/board/list'">목 록</button>
-		<button class="btn btn-danger" type="button">글 삭 제</button>
+		<button class="btn btn-danger" type="button"
+			onclick="location.href='${path}/board/delete?bno=${board.bNo }'">글
+			삭 제</button>
 	</form>
 </div>
 

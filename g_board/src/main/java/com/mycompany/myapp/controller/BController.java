@@ -58,4 +58,11 @@ public class BController {
 		return "redirect:/board/list";
 	}
 	
+	@RequestMapping("/delete")
+	public String delete(@RequestParam("bno")Long bNo) {
+		
+		boardService.delete(bNo);
+		
+		return "redirect:/board/list";
+	}
 }
