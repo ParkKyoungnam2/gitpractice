@@ -27,4 +27,13 @@ public class BoardServiceImpl implements BoardService {
 		boardMapper.insert(boardVO);
 	}
 
+	@Override
+	public BoardVO read(Long bNo) {
+		// TODO Auto-generated method stub
+		
+		boardMapper.bHitUpdate(bNo);
+		BoardVO vo = boardMapper.get(bNo);
+		return vo;
+	}
+
 }

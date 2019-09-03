@@ -9,4 +9,6 @@ public interface BoardService {
 	public List<BoardVO> getlist();
 	
 	public void insert(BoardVO boardVO);
+	
+	public BoardVO read(Long bNo);
 }

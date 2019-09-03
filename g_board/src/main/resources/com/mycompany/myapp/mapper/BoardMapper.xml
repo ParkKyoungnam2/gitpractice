@@ -32,4 +32,10 @@
 		bUpdatedate = sysdate
 		where bno = #{bNo}
 	</update>
+	
+	<update id="bHitUpdate">
+		update g_board
+		set bHit = bHit+1
+		where bno = #{bNo}
+	</update>
 </mapper>

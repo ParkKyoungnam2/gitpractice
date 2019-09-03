@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.mycompany.myapp.domain.BoardVO;
 import com.mycompany.myapp.service.BoardService;
 
 
@@ -21,6 +22,11 @@ public class ServiceTest {
 	@Test
 	public void getListTest() {
 		boardService.getlist();
+	}
+	
+	@Test
+	public void readTest() {
+		BoardVO vo = boardService.read(1L);
 	}
 
 }
