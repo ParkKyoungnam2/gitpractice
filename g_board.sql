@@ -44,4 +44,11 @@ select * from g_board order by bGroup desc, bStep asc;
 select sysdate from dual;
 
 update g_board set bName = '수정된 작성자명' , bTitle = '수정된 글제목' , bContent = '수정된 글 내용' where bno = 1;
---ㅁㅁ
+
+update g_board set bHit = bHit+1 where bno = 1;
+
+update g_board set bHit = bHit+1 where bno = 1;
+
+insert into g_board (bno, bname, btitle, bcontent, bgroup)
+(select g_seq.nextval, bname, btitle, bcontent, g_seq.currval from g_board);
+-- 기존 데이터를 다시 붙여 넣는 식으로 데이터를 늘림
