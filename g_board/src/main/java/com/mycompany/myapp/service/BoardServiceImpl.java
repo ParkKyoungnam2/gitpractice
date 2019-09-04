@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.mycompany.myapp.domain.BoardVO;
+import com.mycompany.myapp.domain.Criteria;
 import com.mycompany.myapp.mapper.BoardMapper;
 
 @Service
@@ -50,6 +51,12 @@ public class BoardServiceImpl implements BoardService {
 	public void delete(Long bNo) {
 		// TODO Auto-generated method stub
 		boardMapper.delete(bNo);
+	}
+
+	@Override
+	public List<BoardVO> listWithPaging(Criteria cri) {
+		// TODO Auto-generated method stub
+		return boardMapper.listWithPaging(cri);
 	}
 
 }

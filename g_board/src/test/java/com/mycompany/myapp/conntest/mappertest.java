@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.mycompany.myapp.domain.BoardVO;
+import com.mycompany.myapp.domain.Criteria;
 import com.mycompany.myapp.mapper.BoardMapper;
 
 
@@ -63,5 +64,12 @@ public class mappertest {
 		vo.setbTitle("수정된 제목test");
 		vo.setbContent("수정된 글 내용test");
 		mapper.modify(vo);
+	}
+	
+	@Test
+	public void listTest2() {
+		Criteria cri = new Criteria(2,10);
+		mapper.listWithPaging(cri);
+		
 	}
 }

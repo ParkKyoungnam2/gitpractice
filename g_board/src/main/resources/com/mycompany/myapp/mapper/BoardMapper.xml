@@ -38,4 +38,21 @@
 		set bHit = bHit+1
 		where bno = #{bNo}
 	</update>
+	
+	<select id="listWithPaging" resultType="com.mycompany.myapp.domain.BoardVO">
+		<![CDATA[
+		select * from (    
+	    		select
+	    		rownum rn,
+	   			 a.*
+	   		 	from
+	        		(select
+	       				*
+	       			from
+	        		g_board
+	        		order by
+	        		bgroup desc, bstep asc) a)
+		where rn > (#{page}-1)*#{max} and rn <= #{page}*#{max}
+		]]>
+	</select>
 </mapper>
