@@ -35,28 +35,30 @@
 			</c:forEach>
 		</tbody>
 	</table>
-<div class="container">
-<div class="row">
-<div class="col-sm"><button class="btn btn-primary btn-right" type="button"
-			onclick="location.href='${path}/board/write'">글 쓰 기</button>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<button class="btn btn-primary btn-right" type="button"
+					onclick="location.href='${path}/board/write'">글 쓰 기</button>
 			</div>
-<div class="col-sm"> <ul class="pagination justify-content-end">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul></div>
-</div>
+			<div class="col-sm">
+				<ul class="pagination justify-content-end">
+					<li class="page-item <c:out value="${pageMaker.prev ? '':'disabled'}" />">
+						<a class="page-link" href="${path }/board/list${pageMaker.makeQuery(pageMaker.begin - 1)}" tabindex="-1">Previous</a>
+					</li>
+					<c:forEach var="idx" begin="${pageMaker.begin }" end="${pageMaker.end }">
+						<li class="page-item"><a class="page-link" href="${path }/board/list${pageMaker.makeQuery(idx)}">${idx }</a></li>
+					</c:forEach>
+					<li class="page-item <c:out value="${pageMaker.next ? '':'disabled'}" />">
+					<a class="page-link" href="${path }/board/list${pageMaker.makeQuery(pageMaker.end + 1)}">Next</a></li>
+				</ul>
+			</div>
+		</div>
 
- 
-</div>
-	
-			
+
+	</div>
+
+
 </div>
 
 <!-- /.container-fluid -->

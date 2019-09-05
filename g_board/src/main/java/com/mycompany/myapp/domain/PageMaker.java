@@ -22,10 +22,10 @@ public class PageMaker {
 		this.totalCount = totalCount;
 		this.PageButtonCount = 10;
 
-		this.end = (int) Math.ceil(cri.getPage() / this.PageButtonCount * 1.0) * this.PageButtonCount;
+		this.end = (int) Math.ceil(cri.getPage() * 1.0/ this.PageButtonCount) * this.PageButtonCount;
 		// 소수점 이하 를 올리는 방식
 		this.begin = this.end - this.PageButtonCount + 1;
-		int realEnd = (int) Math.ceil(totalCount / cri.getMax() * 1.0);
+		int realEnd = (int) Math.ceil(totalCount * 1.0 / cri.getMax());
 
 		if (realEnd < this.end) {
 			this.end = realEnd;

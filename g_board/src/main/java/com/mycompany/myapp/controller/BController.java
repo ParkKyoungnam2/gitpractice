@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mycompany.myapp.domain.BoardVO;
+import com.mycompany.myapp.domain.Criteria;
+import com.mycompany.myapp.domain.PageMaker;
 import com.mycompany.myapp.service.BoardService;
 
 @Controller
@@ -17,9 +19,12 @@ public class BController {
 	@Inject
 	BoardService boardService;
 	@RequestMapping("/list")
-	public String boardList(Model model) {
+	public String boardList(Criteria cri,Model model) {
 		
-		model.addAttribute("list", boardService.getlist());
+		
+		PageMaker pg = new PageMaker(cri,1000);
+		model.addAttribute("list", boardService.listWithPaging(cri));
+		model.addAttribute(pg);
 		
 		return "/board/list";
 	}
