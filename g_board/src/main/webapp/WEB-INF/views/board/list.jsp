@@ -47,7 +47,7 @@
 						<a class="page-link" href="${path }/board/list${pageMaker.makeQuery(pageMaker.begin - 1)}" tabindex="-1">Previous</a>
 					</li>
 					<c:forEach var="idx" begin="${pageMaker.begin }" end="${pageMaker.end }">
-						<li class="page-item"><a class="page-link" href="${path }/board/list${pageMaker.makeQuery(idx)}">${idx }</a></li>
+						<li class="page-item <c:out value="${pageMaker.cri.page == idx ? 'active':''}"/>"><a class="page-link" href="${path }/board/list${pageMaker.makeQuery(idx)}">${idx }</a></li>
 					</c:forEach>
 					<li class="page-item <c:out value="${pageMaker.next ? '':'disabled'}" />">
 					<a class="page-link" href="${path }/board/list${pageMaker.makeQuery(pageMaker.end + 1)}">Next</a></li>
