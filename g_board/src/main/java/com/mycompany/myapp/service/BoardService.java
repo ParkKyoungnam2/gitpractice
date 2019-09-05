@@ -20,4 +20,6 @@ public interface BoardService {
 	public void delete(Long bNo);
 	
 	public List<BoardVO> listWithPaging(Criteria cri);
+	
+	public long count();
 }
