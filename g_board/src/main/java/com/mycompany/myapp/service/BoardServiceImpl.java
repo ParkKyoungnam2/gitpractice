@@ -59,4 +59,10 @@ public class BoardServiceImpl implements BoardService {
 		return boardMapper.listWithPaging(cri);
 	}
 
+	@Override
+	public long count() {
+		// TODO Auto-generated method stub
+		return boardMapper.count();
+	}
+
 }

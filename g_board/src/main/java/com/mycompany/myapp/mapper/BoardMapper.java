@@ -6,7 +6,7 @@ import com.mycompany.myapp.domain.BoardVO;
 import com.mycompany.myapp.domain.Criteria;
 
 public interface BoardMapper {
-	public int count();
+	public long count();
 	
 	public BoardVO get(long bNo);
 	

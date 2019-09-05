@@ -18,11 +18,11 @@ public class BController {
 	
 	@Inject
 	BoardService boardService;
+	
 	@RequestMapping("/list")
 	public String boardList(Criteria cri,Model model) {
 		
-		
-		PageMaker pg = new PageMaker(cri,1000);
+		PageMaker pg = new PageMaker(cri,boardService.count());
 		model.addAttribute("list", boardService.listWithPaging(cri));
 		model.addAttribute(pg);
 		
