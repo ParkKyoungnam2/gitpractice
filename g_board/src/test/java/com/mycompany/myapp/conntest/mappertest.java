@@ -23,7 +23,7 @@ public class mappertest {
 	BoardMapper mapper;
 	@Test
 	public void test() {
-		int count = mapper.count();
+		long count = mapper.count();
 		System.out.println(count);
 	}
 	

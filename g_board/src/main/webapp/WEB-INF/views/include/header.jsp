@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%  pageContext.setAttribute("path", request.getContextPath()); %>
+<%
+	pageContext.setAttribute("path", request.getContextPath());
+%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,7 +25,24 @@
 <link href="/myapp/resources/css/sb-admin-2.min.css" rel="stylesheet">
 
 <!-- Custom styles for this page -->
-<link href="/myapp/resources/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link
+	href="/myapp/resources/vendor/datatables/dataTables.bootstrap4.min.css"
+	rel="stylesheet">
+<style type="text/css">
+		.my.pagination > .active > a, 
+.my.pagination > .active > span, 
+.my.pagination > .active > a:hover, 
+.my.pagination > .active > span:hover, 
+.my.pagination > .active > a:focus, 
+.my.pagination > .active > span:focus {
+  background: gray;
+  border-color: gray;
+}
+.carousel-item > img{
+height : 150px;
+}
+</style>
+
 </head>
 
 <body id="page-top">
@@ -32,15 +51,14 @@
 	<div id="wrapper">
 
 		<!-- Sidebar -->
-		<ul	class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+		<ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion"
+			id="accordionSidebar">
 			<!-- Sidebar - Brand -->
-			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-				<div class="sidebar-brand-icon rotate-n-15">
-					<i class="fas fa-laugh-wink"></i>
-				</div>
-				<div class="sidebar-brand-text mx-3">
-					SB Admin <sup>2</sup>
-				</div>
+			<a
+				class="sidebar-brand d-flex align-items-center justify-content-center"
+				href="index.html">
+
+				<div class="sidebar-brand-text mx-3">Moimat</div>
 			</a>
 
 			<!-- Divider -->
@@ -161,7 +179,7 @@
 							placeholder="Search for..." aria-label="Search"
 							aria-describedby="basic-addon2">
 						<div class="input-group-append">
-							<button class="btn btn-primary" type="button">
+							<button class="btn btn-secondary" type="button">
 								<i class="fas fa-search fa-sm"></i>
 							</button>
 						</div>
@@ -186,7 +204,7 @@
 										placeholder="Search for..." aria-label="Search"
 										aria-describedby="basic-addon2">
 									<div class="input-group-append">
-										<button class="btn btn-primary" type="button">
+										<button class="btn btn-secondary" type="button">
 											<i class="fas fa-search fa-sm"></i>
 										</button>
 									</div>
