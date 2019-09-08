@@ -38,6 +38,9 @@
   background: gray;
   border-color: gray;
 }
+.carousel-item > img{
+height : 150px;
+}
 </style>
 
 </head>
