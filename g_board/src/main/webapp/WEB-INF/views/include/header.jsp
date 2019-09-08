@@ -28,6 +28,18 @@
 <link
 	href="/myapp/resources/vendor/datatables/dataTables.bootstrap4.min.css"
 	rel="stylesheet">
+<style type="text/css">
+		.my.pagination > .active > a, 
+.my.pagination > .active > span, 
+.my.pagination > .active > a:hover, 
+.my.pagination > .active > span:hover, 
+.my.pagination > .active > a:focus, 
+.my.pagination > .active > span:focus {
+  background: gray;
+  border-color: gray;
+}
+</style>
+
 </head>
 
 <body id="page-top">

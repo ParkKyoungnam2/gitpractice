@@ -26,9 +26,9 @@
 		</div>
 		<button class="btn btn-outline-secondary" type="button"
 			onclick="location.href='${path}/board/write'">글 쓰 기</button>
-		<button class="btn btn-primary" type="button"
+		<button class="btn btn-outline-info" type="button"
 			onclick="location.href='${path}/board/list'">목 록</button>
-			<button class="btn btn-default" type="button"
+			<button class="btn btn-outline-warning" type="button"
 			onclick="location.href='${path}/board/modify?bno=${board.bNo }'">글 수 정</button>
 	
 </div>
