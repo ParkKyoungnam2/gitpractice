@@ -5,15 +5,15 @@
 
 
 <!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container">
 
 	<!-- DataTales Example -->
 
 	<h6 class="m-0 font-weight-bold text-primary">Table</h6>
 </div>
-<div class="card-body">
 
-	<table class="table table-bordered">
+<div class="container">
+	<table class="table table-bordered table-hover table-striped">
 		<thead>
 			<tr>
 				<th>글번호</th>
@@ -35,7 +35,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<div class="container">
+	
 		<div class="row">
 			<div class="col-sm">
 				<button class="btn btn-primary btn-right" type="button"
@@ -59,7 +59,7 @@
 	</div>
 
 
-</div>
+
 
 <!-- /.container-fluid -->
 

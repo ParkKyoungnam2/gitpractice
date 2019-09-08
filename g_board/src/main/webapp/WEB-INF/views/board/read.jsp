@@ -24,7 +24,7 @@
 			글내용
 			<textarea class="form-control" rows="10" name="bContent" readonly>${board.bContent }</textarea>
 		</div>
-		<button class="btn btn-primary" type="button"
+		<button class="btn btn-outline-secondary" type="button"
 			onclick="location.href='${path}/board/write'">글 쓰 기</button>
 		<button class="btn btn-primary" type="button"
 			onclick="location.href='${path}/board/list'">목 록</button>
