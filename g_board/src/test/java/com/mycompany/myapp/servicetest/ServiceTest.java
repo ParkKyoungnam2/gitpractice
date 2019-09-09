@@ -8,6 +8,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.mycompany.myapp.domain.BoardVO;
+import com.mycompany.myapp.domain.Criteria;
 import com.mycompany.myapp.service.BoardService;
 
 
@@ -43,6 +44,12 @@ public class ServiceTest {
 	@Test
 	public void deleteTest() {
 		boardService.delete(21L);
+	}
+	
+	@Test
+	public void boardListTest() {
+		Criteria cri = new Criteria();
+		boardService.listWithPaging(cri);
 	}
 
 }

@@ -22,5 +22,5 @@ public interface BoardMapper {
 	
 	public void bHitUpdate(Long bNo);
 	
-	
+	public void replyUpdate(Long bGroup);
 }

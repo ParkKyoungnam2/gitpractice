@@ -23,7 +23,7 @@ public class mappertest {
 	BoardMapper mapper;
 	@Test
 	public void test() {
-		long count = mapper.count();
+		int count = mapper.count();
 		System.out.println(count);
 	}
 	
@@ -59,7 +59,7 @@ public class mappertest {
 	
 	@Test
 	public void modifyTest() {
-		BoardVO vo = mapper.get(2L);
+		BoardVO vo = mapper.get(401L);
 		vo.setbName("수정된 작성자test");
 		vo.setbTitle("수정된 제목test");
 		vo.setbContent("수정된 글 내용test");
