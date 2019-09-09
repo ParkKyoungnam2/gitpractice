@@ -29,17 +29,15 @@
 	href="/myapp/resources/vendor/datatables/dataTables.bootstrap4.min.css"
 	rel="stylesheet">
 <style type="text/css">
-		.my.pagination > .active > a, 
-.my.pagination > .active > span, 
-.my.pagination > .active > a:hover, 
-.my.pagination > .active > span:hover, 
-.my.pagination > .active > a:focus, 
-.my.pagination > .active > span:focus {
-  background: gray;
-  border-color: gray;
+.kn.pagination>.active>a, .kn.pagination>.active>span, .kn.pagination>.active>a:hover,
+	.kn.pagination>.active>span:hover, .kn.pagination>.active>a:focus, .kn.pagination>.active>span:focus
+	{
+	background: gray;
+	border-color: gray;
 }
-.carousel-item > img{
-height : 150px;
+
+.kn.carousel-inner>.carousel-item>img {
+	height: 200px;
 }
 </style>
 
@@ -353,4 +351,28 @@ height : 150px;
 				</ul>
 
 				</nav>
+
+				<!-- Bootstrap core JavaScript-->
+				<script src="/myapp/resources/vendor/jquery/jquery.min.js"></script>
+				<script
+					src="/myapp/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+				<!-- Core plugin JavaScript-->
+				<script
+					src="/myapp/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+				<!-- Custom scripts for all pages-->
+				<script src="/myapp/resources/js/sb-admin-2.min.js"></script>
+
+				<!-- Page level plugins -->
+				<script
+					src="/myapp/resources/vendor/datatables/jquery.dataTables.min.js"></script>
+				<script
+					src="/myapp/resources/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+				<!-- Page level custom scripts -->
+				<script src="/myapp/resources/js/demo/datatables-demo.js"></script>
 				<!-- End of Topbar -->
+				<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+					integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+					crossorigin="anonymous"></script>

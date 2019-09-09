@@ -24,10 +24,10 @@
 			글내용
 			<textarea class="form-control" rows="10" name="bContent">${board.bContent }</textarea>
 		</div>
-		<button class="btn btn-primary" type="submit">글 수 정</button>
-		<button class="btn btn-primary" type="button"
+		<button class="btn btn-outline-success" type="submit">글 수 정</button>
+		<button class="btn btn-outline-info" type="button"
 			onclick="location.href='${path}/board/list'">목 록</button>
-		<button class="btn btn-danger" type="button"
+		<button class="btn btn-outline-danger" type="button"
 			onclick="location.href='${path}/board/delete?bno=${board.bNo }'">글
 			삭 제</button>
 	</form>

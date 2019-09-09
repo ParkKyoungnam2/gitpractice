@@ -1,10 +1,12 @@
 package com.mycompany.myapp.controller;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mycompany.myapp.domain.BoardVO;
@@ -29,14 +31,27 @@ public class BController {
 		return "/board/list";
 	}
 	
-	@RequestMapping("/write")
+	@RequestMapping(value="/write",method=RequestMethod.GET)
 	public String write() {
+		return "/board/write";
+	}
+	@RequestMapping(value="/write",method=RequestMethod.POST)
+	public String replyWrite(BoardVO boardVO,Model model) {
+		
+		model.addAttribute("board",boardVO);
+		
 		return "/board/write";
 	}
 	
 	@RequestMapping("/writeform")
-	public String writeFrom(BoardVO boardVO) {
+	public String writeForm(BoardVO boardVO) {
 		boardService.insert(boardVO);
+		return "redirect:/board/list";
+	}
+	
+	@RequestMapping("/replyform")
+	public String replyForm(BoardVO boardVO) {
+		
 		return "redirect:/board/list";
 	}
 	
