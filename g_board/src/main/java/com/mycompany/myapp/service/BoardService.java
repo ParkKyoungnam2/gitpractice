@@ -22,4 +22,6 @@ public interface BoardService {
 	public List<BoardVO> listWithPaging(Criteria cri);
 	
 	public int count();
+	
+	public void addReply(BoardVO boardVO);
 }

@@ -72,4 +72,14 @@ public class mappertest {
 		mapper.listWithPaging(cri);
 		
 	}
+	
+	@Test
+	public void addReply() {
+		BoardVO vo = mapper.get(401L);
+		
+		mapper.replyUpdate(vo);
+		
+		mapper.insertReply(vo);
+		
+	}
 }

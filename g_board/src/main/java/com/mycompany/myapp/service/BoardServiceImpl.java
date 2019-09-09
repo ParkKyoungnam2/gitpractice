@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mycompany.myapp.domain.BoardVO;
 import com.mycompany.myapp.domain.Criteria;
@@ -63,6 +64,14 @@ public class BoardServiceImpl implements BoardService {
 	public int count() {
 		// TODO Auto-generated method stub
 		return boardMapper.count();
+	}
+
+	@Override
+	@Transactional
+	public void addReply(BoardVO boardVO) {
+		// TODO Auto-generated method stub
+		boardMapper.replyUpdate(boardVO);
+		boardMapper.insertReply(boardVO);
 	}
 
 }

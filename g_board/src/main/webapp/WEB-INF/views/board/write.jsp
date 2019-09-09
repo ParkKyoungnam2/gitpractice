@@ -13,6 +13,9 @@
 </div>
 <div class="container-fluid">
 	<form action="${path }/board/writeform" method="post">
+		<input type="hidden" name="bGroup" value="${board.bGroup }"/>
+		<input type="hidden" name="bGroup" value="${board.bStep }"/>
+		<input type="hidden" name="bGroup" value="${board.bIndent }"/>
 		<div class="form-group">
 			글제목<input class="form-control" name="bTitle"></input>
 		</div>

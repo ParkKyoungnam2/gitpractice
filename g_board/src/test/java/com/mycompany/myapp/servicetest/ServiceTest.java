@@ -51,5 +51,11 @@ public class ServiceTest {
 		Criteria cri = new Criteria();
 		boardService.listWithPaging(cri);
 	}
+	
+	@Test
+	public void addReplyTest() {
+		BoardVO vo = boardService.read(401L);
+		boardService.addReply(vo);
+	}
 
 }
