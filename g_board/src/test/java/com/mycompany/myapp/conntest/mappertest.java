@@ -29,7 +29,7 @@ public class mappertest {
 	
 	@Test
 	public void get() {
-		BoardVO vo = mapper.get(1);
+		BoardVO vo = mapper.get(1L);
 	}
 
 	@Test
@@ -54,12 +54,12 @@ public class mappertest {
 	
 	@Test
 	public void deleteTest() {
-		mapper.delete(2);
+		mapper.delete(2L);
 	}
 	
 	@Test
 	public void modifyTest() {
-		BoardVO vo = mapper.get(2);
+		BoardVO vo = mapper.get(2L);
 		vo.setbName("수정된 작성자test");
 		vo.setbTitle("수정된 제목test");
 		vo.setbContent("수정된 글 내용test");

@@ -60,7 +60,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public long count() {
+	public int count() {
 		// TODO Auto-generated method stub
 		return boardMapper.count();
 	}
