@@ -7,7 +7,7 @@ public class PageMaker {
 
 	Criteria cri; // 페이지 기준
 
-	long totalCount; // 전체글 수
+	int totalCount; // 전체글 수
 
 	int begin; // 숫자버튼 의 시작 숫자
 	int end; // 숫자버튼의 끝 숫자
@@ -17,7 +17,7 @@ public class PageMaker {
 
 	int PageButtonCount; // 페이지에 보여지는 숫자버튼 개수
 
-	public PageMaker(Criteria cri, long totalCount) {
+	public PageMaker(Criteria cri, int totalCount) {
 		this.cri = cri;
 		this.totalCount = totalCount;
 		this.PageButtonCount = 10;
@@ -44,11 +44,11 @@ public class PageMaker {
 		this.cri = cri;
 	}
 
-	public long getTotalCount() {
+	public int getTotalCount() {
 		return totalCount;
 	}
 
-	public void setTotalCount(long totalCount) {
+	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
 	}
 

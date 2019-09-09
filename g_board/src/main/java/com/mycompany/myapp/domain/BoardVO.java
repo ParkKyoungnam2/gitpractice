@@ -11,7 +11,7 @@ public class BoardVO {
 	private Date bDate;
 	private Date bUpdateDate;
 	private Long bHit;
-	private int bGroup;
+	private Long bGroup;
 	private int bStep;
 	private int bIndent;
 	public Long getbNo() {
@@ -56,10 +56,10 @@ public class BoardVO {
 	public void setbHit(Long bHit) {
 		this.bHit = bHit;
 	}
-	public int getbGroup() {
+	public Long getbGroup() {
 		return bGroup;
 	}
-	public void setbGroup(int bGroup) {
+	public void setbGroup(Long bGroup) {
 		this.bGroup = bGroup;
 	}
 	public int getbStep() {

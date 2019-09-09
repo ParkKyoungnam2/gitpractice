@@ -51,7 +51,7 @@ public class BController {
 	
 	@RequestMapping("/replyform")
 	public String replyForm(BoardVO boardVO) {
-		
+		boardService.addReply(boardVO);
 		return "redirect:/board/list";
 	}
 	

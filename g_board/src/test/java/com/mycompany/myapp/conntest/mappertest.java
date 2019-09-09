@@ -23,13 +23,13 @@ public class mappertest {
 	BoardMapper mapper;
 	@Test
 	public void test() {
-		long count = mapper.count();
+		int count = mapper.count();
 		System.out.println(count);
 	}
 	
 	@Test
 	public void get() {
-		BoardVO vo = mapper.get(1);
+		BoardVO vo = mapper.get(1L);
 	}
 
 	@Test
@@ -54,12 +54,12 @@ public class mappertest {
 	
 	@Test
 	public void deleteTest() {
-		mapper.delete(2);
+		mapper.delete(2L);
 	}
 	
 	@Test
 	public void modifyTest() {
-		BoardVO vo = mapper.get(2);
+		BoardVO vo = mapper.get(401L);
 		vo.setbName("수정된 작성자test");
 		vo.setbTitle("수정된 제목test");
 		vo.setbContent("수정된 글 내용test");
@@ -70,6 +70,16 @@ public class mappertest {
 	public void listTest2() {
 		Criteria cri = new Criteria(2,10);
 		mapper.listWithPaging(cri);
+		
+	}
+	
+	@Test
+	public void addReply() {
+		BoardVO vo = mapper.get(401L);
+		
+		mapper.replyUpdate(vo);
+		
+		mapper.insertReply(vo);
 		
 	}
 }

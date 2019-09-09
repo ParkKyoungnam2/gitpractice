@@ -3,7 +3,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.mycompany.myapp.mapper.BoardMapper">
-	<select id="count" resultType="long">
+	<select id="count" resultType="int">
 		select count(*) from g_board
 	</select>
 	
@@ -55,4 +55,15 @@
 		where rn > (#{page}-1)*#{max} and rn <= #{page}*#{max}
 		]]>
 	</select>
+	
+	<update id="replyUpdate">
+		update g_board
+		set bStep = bStep+1
+		where bGroup = #{bGroup} and bStep > #{bStep}
+	</update>
+	
+	<insert id="insertReply">
+		insert into g_board(bno, bname, btitle, bcontent, bgroup, bStep, bIndent)
+		values (g_seq.nextval, #{bName}, #{bTitle}, #{bContent}, #{bGroup},#{bStep}+1,#{bIndent}+1)
+	</insert>
 </mapper>

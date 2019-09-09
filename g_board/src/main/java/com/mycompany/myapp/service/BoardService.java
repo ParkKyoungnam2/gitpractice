@@ -21,5 +21,7 @@ public interface BoardService {
 	
 	public List<BoardVO> listWithPaging(Criteria cri);
 	
-	public long count();
+	public int count();
+	
+	public void addReply(BoardVO boardVO);
 }

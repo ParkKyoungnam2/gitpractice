@@ -6,9 +6,9 @@ import com.mycompany.myapp.domain.BoardVO;
 import com.mycompany.myapp.domain.Criteria;
 
 public interface BoardMapper {
-	public long count();
+	public int count();
 	
-	public BoardVO get(long bNo);
+	public BoardVO get(Long bId);
 	
 	public List<BoardVO> getList();
 	
@@ -16,9 +16,13 @@ public interface BoardMapper {
 	
 	public void insert(BoardVO boardVO);
 	
-	public void delete(long bNo);
+	public void delete(Long bNo);
 	
 	public void modify(BoardVO boardVO);
 	
 	public void bHitUpdate(Long bNo);
+	
+	public void replyUpdate(BoardVO boardVO);
+	
+	public void insertReply(BoardVO boardVO);
 }

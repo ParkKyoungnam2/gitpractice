@@ -4,8 +4,6 @@ public class Criteria {
 	
 	private int page; // 몇번째 페이지 인가
 	private int max; // 페이지당 보여줄 최대 글 수.
-
-	
 	
 	public Criteria() {
 		this(1,10);
